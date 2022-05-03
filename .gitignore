@@ -1,0 +1,10 @@
+# TaskCat
+.taskcat/
+packages/
+taskcat_outputs/
+
+# macOS
+.DS_Store
+
+# IDE workspace settings
+.vscode/
