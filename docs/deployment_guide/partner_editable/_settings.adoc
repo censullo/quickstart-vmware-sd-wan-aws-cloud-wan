@@ -1,11 +1,12 @@
-:quickstart-project-name: quickstart-vmware-sd-wan
+:quickstart-project-name: quickstart-vmware-sd-wan-aws-cloud-wan
 :quickstart-github-org: aws-quickstart
-:partner-product-name: VMware Software-Defined WAN (SD-WAN)
-:partner-product-short-name: VMware SD-WAN
+:partner-company-short-name: VMware
+:partner-product-name: {partner-company-short-name} Software-Defined WAN (SD-WAN)
+:partner-product-short-name: {partner-company-short-name} SD-WAN
 :partner-company-name: VMware Inc.
 :doc-month: July
 :doc-year: 2022
-:partner-contributors: Eric Cheung-Young-Sen, {partner-company-name}
+:partner-contributors: David Wight, Eric Cheung-Young-Sen, and Vivek Achar, {partner-company-name}
 // :other-contributors: Akua Mansa, Trek10
 :aws-contributors: Sudha Thillai Govindarajan, AWS VMware Partner team
 :aws-ia-contributors: Troy Lindsay, AWS Integration & Automation team
