@@ -1,7 +1,7 @@
 :quickstart-project-name: quickstart-vmware-sd-wan-aws-cloud-wan
 :quickstart-github-org: aws-quickstart
 :partner-company-short-name: VMware
-:partner-product-name: {partner-company-short-name} Software-Defined WAN (SD-WAN)
+:partner-product-name: {partner-company-short-name} Software-Defined WAN
 :partner-product-short-name: {partner-company-short-name} SD-WAN
 :partner-company-name: VMware, Inc.
 :doc-month: July
