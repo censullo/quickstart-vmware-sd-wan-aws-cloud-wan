@@ -1,16 +1,7 @@
 // Edit this placeholder text as necessary to describe the deployment options.
 
-To deploy the entire Quick Starts stack, please follow the instructions in the deployment guide. The deployment takes about 10 minutes and here are the steps:
+This Quick Start provides the following deployment option:
 
-1. Download the Quick Starts package here (insert hyperlink).
-
-2. Sign in to your AWS account and upload the files into your S3 bucket . It you do not have an account, sign up at https://aws.amazon.com
-
-3. Execute the quickstarts-start file
-
-This Quick Start provides the following deployment options:
-
-* http://qs_launch_permalink[Deploy {partner-product-short-name} into a new VPC^]. This option builds a new AWS environment that consists of a transit VPC, subnets, Internet Gateway, security groups, Core Network Edge, Customer Gateways. It then deploys {partner-product-short-name} into this new VPC across two Availability Zones, brings up the Site-to-Site VPN and extends segmentation from on-premises all the way into the AWS Cloud
-
-
-4. Test the deployment
+* http://qs_launch_permalink[Deploy {partner-product-short-name} into a new VPC^].
+  This option builds a new AWS environment that consists of a transit VPC, subnets, Internet Gateway, security groups, Core Network Edge, Customer Gateways.
+  It then deploys {partner-product-short-name} into this new VPC across two Availability Zones, brings up the Site&#8209;to&#8209;Site VPN and extends segmentation from on&#8209;premises all the way into the AWS Cloud.
