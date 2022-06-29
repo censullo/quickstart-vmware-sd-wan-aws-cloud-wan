@@ -1,8 +1,16 @@
 // Edit this placeholder text as necessary to describe the deployment options.
 
+To deploy the entire Quick Starts stack, please follow the instructions in the deployment guide. The deployment takes about 10 minutes and here are the steps:
+
+1. Download the Quick Starts package here (insert hyperlink).
+
+2. Sign in to your AWS account and upload the files into your S3 bucket . It you do not have an account, sign up at https://aws.amazon.com
+
+3. Execute the quickstarts-start file
+
 This Quick Start provides the following deployment options:
 
-* http://qs_launch_permalink[Deploy {partner-product-short-name} into a new VPC^]. This option builds a new AWS environment that consists of the VPC, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys {partner-product-short-name} into this new VPC.
-* http://qs_launch_permalink[Deploy {partner-product-short-name} into an existing VPC^]. This option provisions {partner-product-short-name} in your existing AWS infrastructure.
+* http://qs_launch_permalink[Deploy {partner-product-short-name} into a new VPC^]. This option builds a new AWS environment that consists of a transit VPC, subnets, Internet Gateway, security groups, Core Network Edge, Customer Gateways. It then deploys {partner-product-short-name} into this new VPC across two Availability Zones, brings up the Site-to-Site VPN and extends segmentation from on-premises all the way into the AWS Cloud
 
-This Quick Start provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks, instance types, and {partner-product-short-name} settings.
+
+4. Test the deployment
