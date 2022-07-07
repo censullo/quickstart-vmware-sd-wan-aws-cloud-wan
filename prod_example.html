@@ -909,7 +909,11 @@ Refer to the <a href="https://github.com/aws-quickstart/quickstart-vmware-sd-wan
 <h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This Quick Start deploys VMware Software-Defined WAN (VMware SD-WAN) on the AWS Cloud. If you are unfamiliar with AWS Quick Starts, refer to the <a href="https://fwd.aws/rA69w?" target="_blank" rel="noopener">AWS Quick Start General Information Guide</a>.</p>
+<p>This Quick Start deploys VMware SD-WAN Virtual Edge (vEdge) on the AWS Cloud. It allows enterprises to extend VMware SD-WAN all to the way to the AWS Cloud for users to connect to their workloads running on AWS.</p>
+</div>
+<div class="paragraph">
+<p>This Quick Start deploys a cluster of vEdge across different Availability Zones in order to achieve high availability. It also brings up a Core Network Edge which allows connectivity to customer workload VPCs and extends segmentation from on-premises into the AWS Cloud.
+The VMware SD-WAN Orchestrator provides a single pane of glass for monitoring, reporting and management of the VMware SD-WAN Edges.</p>
 </div>
 </div>
 </div>
@@ -917,7 +921,14 @@ Refer to the <a href="https://github.com/aws-quickstart/quickstart-vmware-sd-wan
 <h2 id="_costs_and_licenses">Costs and licenses</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There is no cost to use this Quick Start, but you will be billed for any AWS services or resources that this Quick Start deploys. For more information, refer to the <a href="https://fwd.aws/rA69w?" target="_blank" rel="noopener">AWS Quick Start General Information Guide</a>.</p>
+<p>This Quick Start requires a subscription to the Amazon Machine Image (AMI) for VMware SD-WAN, available in the AWS Marketplace (insert hyperlink). It also requires two VMware SD-WAN licenses, available from a VMware SD-WAN channel partner.
+Additional pricing, terms and conditions may apply.</p>
+</div>
+<div class="paragraph">
+<p>There is no cost to use this Quick Start, but you will be billed for any AWS services or resources that this Quick Start deploys. For example, the instance type of VMware SD-WAN Edge that you choose will affect the cost.</p>
+</div>
+<div class="paragraph">
+<p>For more information, refer to the <a href="https://fwd.aws/rA69w?" target="_blank" rel="noopener">AWS Quick Start General Information Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -940,42 +951,26 @@ AWS Cloud.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>A highly available architecture that spans two Availability Zones.*</p>
+<p>A highly available architecture that spans two Availability Zones.</p>
 </li>
 <li>
-<p>A virtual private cloud (VPC) configured with public and private subnets, according to AWS
-best practices, to provide you with your own virtual network on AWS.*</p>
+<p>A transit virtual private cloud (VPC) configured with public and private subnets, according to AWS
+best practices, to provide you with your own virtual network on AWS.</p>
 </li>
 <li>
-<p>In the public subnets:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Managed network address translation (NAT) gateways to allow outbound
-internet access for resources in the private subnets.*</p>
+<p>An Internet Gateway that allows the VPC to connect to the Internet.</p>
 </li>
 <li>
-<p>A Linux bastion host in an Auto Scaling group to allow inbound Secure
-Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in public and private subnets.*</p>
-</li>
-</ul>
-</div>
+<p>In the public subnets, the VMware SD-WAN Edge builds VPN tunnels to the Core Network Edge.</p>
 </li>
 <li>
-<p>In the private subnets:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>&lt;item&gt;.</p>
+<p>A Core Network Edge, enabling connectivity to workloads located in the attached VPCs.</p>
 </li>
 <li>
-<p>&lt;item&gt;.</p>
-</li>
-</ul>
-</div>
+<p>Segmentation from on-premises all the way into the AWS Cloud.</p>
 </li>
 <li>
-<p>&lt;describe any additional components&gt;.</p>
+<p>Amazon CloudWatch to collect logs of the AWS Quick Starts deployment and AWS Lambda execution.</p>
 </li>
 </ul>
 </div>
@@ -988,20 +983,16 @@ Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in pub
 <h2 id="_deployment_options">Deployment options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This Quick Start provides the following deployment options:</p>
+<p>This Quick Start provides the following deployment option:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new VPC</a>. This option builds a new AWS environment that consists of the VPC, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys VMware SD-WAN into this new VPC.</p>
-</li>
-<li>
-<p><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy VMware SD-WAN into an existing VPC</a>. This option provisions VMware SD-WAN in your existing AWS infrastructure.</p>
+<p><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new VPC</a>.
+This option builds a new AWS environment that consists of a transit VPC, subnets, Internet Gateway, security groups, Core Network Edge, Customer Gateways.
+It then deploys VMware SD-WAN into this new VPC across two Availability Zones, brings up the Site&#8209;to&#8209;Site VPN and extends segmentation from on&#8209;premises all the way into the AWS Cloud.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>This Quick Start provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks, instance types, and VMware SD-WAN settings.</p>
 </div>
 </div>
 </div>

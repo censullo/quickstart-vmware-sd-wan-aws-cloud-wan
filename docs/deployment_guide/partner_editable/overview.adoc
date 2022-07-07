@@ -1,5 +1,4 @@
-This Quick Start deploys {partner-product-name} ({partner-product-short-name}) on the AWS Cloud. If you are unfamiliar with AWS Quick Starts, refer to the https://fwd.aws/rA69w?[AWS Quick Start General Information Guide^].
+This Quick Start deploys {partner-product-short-name} Virtual Edge (vEdge) on the AWS Cloud. It allows enterprises to extend {partner-product-short-name} all to the way to the AWS Cloud for users to connect to their workloads running on AWS.
 
-// For advanced information about the product that this Quick Start deploys, refer to the https://{quickstart-github-org}.github.io/{quickstart-project-name}/operational/index.html[Operational Guide^].
-
-// For information about using this Quick Start for migrations, refer to the https://{quickstart-github-org}.github.io/{quickstart-project-name}/migration/index.html[Migration Guide^].
+This Quick Start deploys a cluster of vEdge across different Availability Zones in order to achieve high availability. It also brings up a Core Network Edge which allows connectivity to customer workload VPCs and extends segmentation from on-premises into the AWS Cloud.
+The {partner-product-short-name} Orchestrator provides a single pane of glass for monitoring, reporting and management of the {partner-product-short-name} Edges.
