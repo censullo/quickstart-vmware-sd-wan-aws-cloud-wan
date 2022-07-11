@@ -1,3 +1,15 @@
 //Include any predeployment steps here, such as signing up for a Marketplace AMI or making any changes to a partner account. If there are no predeployment steps, leave this file empty.
 
 == Predeployment steps
+
+Before using this Quick start, you must:
+
+*	Have an administrator account created on the {partner-company-short-name} Orchestrator.
+*	Have a Hub Profile already created, which will be assigned to the Hub Cluster.
+*	Have segments already defined on the {partner-company-short-name} Orchestrator.
+*	Have a policy file already defined for the AWS Cloud WAN. See example here (insert hyperlink here https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html)
+*	Ensure that the account quotas for Amazon VPC and Site-to-Site VPN are sufficient for the desired deployment configuration.
+
+IMPORTANT: In this document, we assume that for every VPC attachment there's only one subnet part of that VPC.
+
+IMPORTANT: In this document, we assume there’s no other "NSD via Edge" configuration. Existing NSD via Edge configurations may cause the deployment to fail. 

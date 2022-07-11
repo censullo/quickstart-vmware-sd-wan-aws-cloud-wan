@@ -1,3 +1,11 @@
 // Include any postdeployment steps here, such as steps necessary to test that the deployment was successful. If there are no postdeployment steps, leave this file empty.
 
 == Postdeployment steps
+
+Once the deployment has completed, you will have an environment with:
+
+*	Two (2) SD-WAN virtual edges in two (2) separate Availability Zones.
+*	A AWS Cloud WAN Core Network Edge (CNE).
+*	Eight (8) route-based VPNs to the CNE for two (2) segments .
+
+Afterward, add the necessary static routes to your workload VPCs' route tables for traffic destined to your branches/on-premises.

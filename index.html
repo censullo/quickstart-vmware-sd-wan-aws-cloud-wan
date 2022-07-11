@@ -999,7 +999,52 @@ It then deploys VMware SD-WAN into this new VPC across two Availability Zones, b
 <div class="sect1">
 <h2 id="_predeployment_steps">Predeployment steps</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Before using this Quick start, you must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Have an administrator account created on the VMware Orchestrator.</p>
+</li>
+<li>
+<p>Have a Hub Profile already created, which will be assigned to the Hub Cluster.</p>
+</li>
+<li>
+<p>Have segments already defined on the VMware Orchestrator.</p>
+</li>
+<li>
+<p>Have a policy file already defined for the AWS Cloud WAN. See example here (insert hyperlink here <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html" class="bare">https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html</a>)</p>
+</li>
+<li>
+<p>Ensure that the account quotas for Amazon VPC and Site-to-Site VPN are sufficient for the desired deployment configuration.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In this document, we assume that for every VPC attachment there&#8217;s only one subnet part of that VPC.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In this document, we assume there’s no other "NSD via Edge" configuration. Existing NSD via Edge configurations may cause the deployment to fail.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1053,7 +1098,25 @@ Unless you are customizing the Quick Start templates for your own projects, don&
 <div class="sect1">
 <h2 id="_postdeployment_steps">Postdeployment steps</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Once the deployment has completed, you will have an environment with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Two (2) SD-WAN virtual edges in two (2) separate Availability Zones.</p>
+</li>
+<li>
+<p>A AWS Cloud WAN Core Network Edge (CNE).</p>
+</li>
+<li>
+<p>Eight (8) route-based VPNs to the CNE for two (2) segments .</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Afterward, add the necessary static routes to your workload VPCs' route tables for traffic destined to your branches/on-premises.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1112,7 +1175,7 @@ Unless you are customizing the Quick Start templates for your own projects, don&
 </html>
 <!--
 repo commit:
-bc12293ee7e7fbd49ed0fb6c6d80f33a480d44c3
+f9aed8972fab2790f44859b24e28f8b882db2ddf
 
 submodule config:
  f84e2579b135a095c1946d204f6f1050ae682d3a docs/boilerplate (remotes/origin/watermark-5-gf84e257)
