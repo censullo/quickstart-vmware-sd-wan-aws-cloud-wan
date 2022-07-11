@@ -4,10 +4,10 @@
 
 Before using this Quick start, you must:
 
-*	Have an administrator account created on the {partner-company-short-name} Orchestrator.
-*	Have a Hub Profile already created, which will be assigned to the Hub Cluster.
-*	Have segments already defined on the {partner-company-short-name} Orchestrator.
-*	Have a policy file already defined for the AWS Cloud WAN. See example here (insert hyperlink here https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html)
+*	Have an [administrator account] (https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6375F518-3A22-4CDD-B4F0-F0B2EC553869.html) created on the {partner-company-short-name} Orchestrator. 
+*	Have a Hub [Profile] (https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-D174B662-089C-4EC9-A389-682363C40ADF.html?hWord=N4IghgNiBcIA4CcD2AzAlhApgZxAXyA) already created, which will be assigned to the Hub Cluster.
+*	Have [segments] (https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html?hWord=N4IghgNiBcIM4FMDmBbBA7ALnEBfIA) already defined on the {partner-company-short-name} Orchestrator.
+*	Have a policy file already defined for the AWS Cloud WAN. See example [here] (https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html)
 *	Ensure that the account quotas for Amazon VPC and Site-to-Site VPN are sufficient for the desired deployment configuration.
 
 IMPORTANT: In this document, we assume that for every VPC attachment there's only one subnet part of that VPC.
