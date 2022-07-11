@@ -1,3 +1,13 @@
 // Include any postdeployment steps here, such as steps necessary to test that the deployment was successful. If there are no postdeployment steps, leave this file empty.
 
 == Postdeployment steps
+
+The deployment process should take approximately 10-12minutes to complete.
+Once completed, you will have an environment with:
+
+a.	Two SD-WAN virtual edges in two separate Availability Zones
+b.	A AWS Cloud WAN Core Network Edge (CNE)
+c.	(8) Route-based VPNs to the CNE for (2) segments 
+
+
+Once the execution succeeds, add the necessary static routes for traffic destined to the branches/on-prem to your workload VPCs route table
