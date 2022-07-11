@@ -2,15 +2,14 @@
 
 == Predeployment steps
 
+Before using this Quick start, you must:
 
-Before using this Quick start, customers first need to:
+*	Have an administrator account created on the {partner-company-short-name} Orchestrator.
+*	Have a Hub Profile already created, which will be assigned to the Hub Cluster.
+*	Have segments already defined on the {partner-company-short-name} Orchestrator.
+*	Have a policy file already defined for the AWS Cloud WAN. See example here (insert hyperlink here https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html)
+*	Ensure that the account quotas for Amazon VPC and Site-to-Site VPN are sufficient for the desired deployment configuration.
 
-•	Have an administrator account created on the VMware Orchestrator
-•	Have a Hub Profile already created and to be assigned to the Hub Cluster 
-•	Have segments already defined on the VMware Orchestrator
-•	Have a policy file already defined for the AWS Cloud WAN. See example here (insert hyperlink here https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-examples.html)
-•	Have A AWS S3 bucket to host the *.json files (which must be in the same region as the Core Network Edge to be deployed)
-•	Ensure there’s no quota limitation (VPC, Site-to-Site VPN)
+IMPORTANT: In this document, we assume that for every VPC attachment there's only one subnet part of that VPC.
 
-Note: In this document, we assume that for every VPC attachment there’s only one subnet part of that VPC.
-Note2: In this document, we assume there’s no other “NSD via Edge” configuration. Else this may cause the Site-to-Site VPN to fail. 
+IMPORTANT: In this document, we assume there’s no other "NSD via Edge" configuration. Existing NSD via Edge configurations may cause the deployment to fail. 
