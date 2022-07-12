@@ -988,7 +988,7 @@ best practices, to provide you with your own virtual network on AWS.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new VPC</a>.
+<p><a href="https://kb.vmware.com/s/article/88941" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new VPC</a>.
 This option builds a new AWS environment that consists of a transit VPC, subnets, Internet Gateway, security groups, Core Network Edge, Customer Gateways.
 It then deploys VMware SD-WAN into this new VPC across two Availability Zones, brings up the Site&#8209;to&#8209;Site VPN and extends segmentation from on&#8209;premises all the way into the AWS Cloud.</p>
 </li>
@@ -1116,6 +1116,37 @@ Unless you are customizing the Quick Start templates for your own projects, don&
 </div>
 <div class="paragraph">
 <p>Afterward, add the necessary static routes to your workload VPCs' route tables for traffic destined to your branches/on-premises.</p>
+</div>
+<div class="paragraph">
+<p>In the event you need to delete the environment you previously built, here are the necessary steps required and artifacts that will need to be deleted manually:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Delete the static routes that were added as part of the post-deployment steps.</p>
+</li>
+<li>
+<p>Delete the VPC &amp; VPN <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html">attachments</a></p>
+</li>
+<li>
+<p>Delete the start.json stack</p>
+</li>
+<li>
+<p>Delete the <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Site-to-Site VPN Connections</a></p>
+</li>
+<li>
+<p>Delete the <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/your-cgw.html">Customer Gateways</a></p>
+</li>
+<li>
+<p>Delete the Core Network Edge</p>
+</li>
+<li>
+<p>Delete the Global Network</p>
+</li>
+<li>
+<p>On the VMware SD-WAN Orchestrator, delete the Hub cluster assigned to the Branch profile and <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html?hWord=N4IghgNiBcIHYFMAuB3A9gJwNYAIDOCGAbgJYDGCeIAvkA">edge cluster</a> configuration</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
