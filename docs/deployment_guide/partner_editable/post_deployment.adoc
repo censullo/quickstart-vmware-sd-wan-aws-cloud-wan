@@ -4,20 +4,24 @@
 
 Once the deployment has completed, you will have an environment with:
 
-*	Two (2) SD-WAN virtual edges in two (2) separate Availability Zones.
-*	A AWS Cloud WAN Core Network Edge (CNE).
-*	Eight (8) route-based VPNs to the CNE for two (2) segments .
+*	Two (2) {partner-software-edge} EC2 instances in two (2) separate availability zones.
+*	An AWS Cloud WAN core network edge (CNE).
+*	A site&#8209;to&#8209;site route-based VPN connection for each {partner-software-edge} for each segment.
+  With a two (2) {partner-software-edge} and two (2) segment configuration, there will be four (4) highly available VPN connections with two (2) VPN tunnels each for eight (8) VPN tunnels total.
 
-Afterward, add the necessary static routes to your workload VPCs' route tables for traffic destined to your branches/on-premises.
+Afterward, https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[add the necessary static routes] to your workload VPCs' route tables for traffic destined to your branches/on-premises.
 
+In the event that you need to delete the environment that you previously built, here are the necessary steps required and artifacts that will need to be deleted manually:
 
-In the event you need to delete the environment you previously built, here are the necessary steps required and artifacts that will need to be deleted manually:
-
-* Delete the static routes that were added as part of the post-deployment steps.
-* Delete the VPC & VPN https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html[attachments]
-* Delete the start.json stack
-* Delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html[Site-to-Site VPN Connections]
-* Delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/your-cgw.html[Customer Gateways] 
-* Delete the Core Network Edge
-* Delete the Global Network
-* On the {partner-product-short-name} Orchestrator, delete the Hub cluster assigned to the Branch profile and https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html?hWord=N4IghgNiBcIHYFMAuB3A9gJwNYAIDOCGAbgJYDGCeIAvkA[edge cluster] configuration
+* https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[Delete the static routes] in the workload VPC route tables that were added as part of the post-deployment steps.
+* From the https://console.aws.amazon.com/cloudformation/home[CloudFormation console]:
+** https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-delete-stack.html[Delete the root stack], which will automatically delete the other stacks.
+* From the https://console.aws.amazon.com/networkmanager/home#/networks[Network Manager console]:
+** Delete the https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html[VPC & VPN attachments].
+** Delete the core network edge.
+** Delete the global network.
+* From the https://console.aws.amazon.com/vpc/home[VPC console]:
+** Delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html[site&#8209;to&#8209;site VPN connections].
+** Delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/your-cgw.html[customer gateways].
+* From the {partner-software-orchestrator} console:
+** Delete the hub cluster assigned to the profile and https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html[edge cluster] configuration.
