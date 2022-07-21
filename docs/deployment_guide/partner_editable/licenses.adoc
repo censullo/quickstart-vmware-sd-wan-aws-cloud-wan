@@ -1,8 +1,10 @@
 // Include details about any licenses and how to sign up. Provide links as appropriate.
 
-This Quick Start requires a subscription to the Amazon Machine Image (AMI) for {partner-product-short-name}, available in the AWS Marketplace (insert hyperlink). It also requires two {partner-product-short-name} licenses, available from a {partner-product-short-name} channel partner.
+This Quick Start requires an AWS Marketplace subscription to the https://aws.amazon.com/marketplace/pp/prodview-b5ry47j35e7jg[{partner-software-edge} Amazon machine image (AMI)].
+It also requires {partner-product-short-name} licenses, available from a https://sase.vmware.com/partners[{partner-product-short-name} channel partner].
 Additional pricing, terms and conditions may apply.
 
-There is no cost to use this Quick Start, but you will be billed for any AWS services or resources that this Quick Start deploys. For example, the instance type of {partner-product-short-name} Edge that you choose will affect the cost.
+There is no cost to use this Quick Start, but you will be billed for any AWS services or resources that this Quick Start deploys.
+For example, the instance type of {partner-software-edge} that you choose will affect the cost.
 
 For more information, refer to the https://fwd.aws/rA69w?[AWS Quick Start General Information Guide^].
