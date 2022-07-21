@@ -2,5 +2,12 @@
 
 For troubleshooting common Quick Start issues, refer to the https://fwd.aws/rA69w?[AWS Quick Start General Information Guide^] and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html[Troubleshooting CloudFormation^].
 
+=== {partner-product-short-name} documentation
+
+* https://docs.vmware.com/en/VMware-SD-WAN/5.0/sd-wan-orchestrator-deployment-and-monitoring-guide/GUID-98E59261-4F2E-447E-934E-876AD49125B6.html[Troublehooting {partner-software-orchestrator}]
+* https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-DF77CD1D-DCA0-4E6B-A7C3-3FA4D188E80E.html[Run remote diagnostics on the {partner-software-edge}]
+* https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6027F4B6-3A1C-45EF-9CCF-AB55A85E8CCF.html[Perform remote actions on the {partner-software-edge}]
+* https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-3DEA67A4-6BC6-468E-AA09-7D7C04B8FF14.html[Collect diagnostic bundles for the {partner-software-edge}]
+
 // == Resources
 // Uncomment section and add links to any external resources that are specified by the partner.
