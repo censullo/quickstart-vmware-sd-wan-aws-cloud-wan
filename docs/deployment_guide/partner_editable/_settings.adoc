@@ -4,7 +4,9 @@
 :partner-product-name: {partner-company-short-name} Software-Defined WAN
 :partner-product-short-name: {partner-company-short-name} SD-WAN
 :partner-software-edge: {partner-product-short-name} Virtual Edge
+:partner-software-edge-short: vEdge
 :partner-software-orchestrator: {partner-product-short-name} Orchestrator
+:partner-software-orchestrator-short: VCO
 :partner-company-name: VMware, Inc.
 :doc-month: July
 :doc-year: 2022
