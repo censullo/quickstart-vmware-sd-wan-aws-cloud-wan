@@ -2,9 +2,15 @@
 .taskcat/
 packages/
 taskcat_outputs/
+.taskcat_overrides.yml
 
 # macOS
 .DS_Store
+
+# Python
+.python-version
+venv/
+env/
 
 # IDE workspace settings
 .vscode/
