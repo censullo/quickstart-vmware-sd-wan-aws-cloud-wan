@@ -9,6 +9,7 @@ Once the deployment has completed, you will have an environment with:
 *	A site&#8209;to&#8209;site route-based VPN connection for each {partner-software-edge} for each segment.
   With a two (2) {partner-software-edge} and two (2) segment configuration, there will be four (4) highly available VPN connections with two (2) VPN tunnels each for eight (8) VPN tunnels total.
 
+After deployment, add the necessary static routes to your workload VPC route tables
 Afterward, https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[add the necessary static routes] to your workload VPCs' route tables for traffic destined to your branches/on-premises.
 
 In the event that you need to delete the environment that you previously built, here are the necessary steps required and artifacts that will need to be deleted manually:
