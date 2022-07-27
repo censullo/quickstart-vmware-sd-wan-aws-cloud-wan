@@ -2,11 +2,12 @@
 
 == Predeployment steps
 
-Before using this Quick start, you must have:
+Before deploying this Quick Start, ensure that you complete the following.
 
-* An https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6375F518-3A22-4CDD-B4F0-F0B2EC553869.html[administrator account] created on the {partner-software-orchestrator} (on the {partner-software-orchestrator-short}) that will be used as a service account.
-* A https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-D174B662-089C-4EC9-A389-682363C40ADF.html[hub profile] already created on the {partner-software-orchestrator-short}, which will be assigned to the new hub cluster.
-* Two https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html[segments] already defined on the {partner-software-orchestrator-short}- the first of which must be the built&#8209;in Global Segment.
-* Two existing VPCs that will each be connected to one of the specified segments.
-* The https://console.aws.amazon.com/servicequotas/home/services/vpc/quotas/L-F678F1CE[VPC per Region] and https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-3E6EC3A3[VPN connections per Region] service quotas set (or adjusted) to sufficient values for the desired deployment configuration.
-* An AWS Marketplace subscription for the https://aws.amazon.com/marketplace/pp/prodview-b5ry47j35e7jg[{partner-software-edge} Amazon machine image (AMI)] for the account.
+* In the {partner-software-orchestrator}:
+** Create a VMware SD-WAN https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6375F518-3A22-4CDD-B4F0-F0B2EC553869.html[administrator account] that will be used as a service account.
+** Create a https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-D174B662-089C-4EC9-A389-682363C40ADF.html[hub profile], which will be assigned to the new hub cluster.
+** Define two https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html[segments]. The first segment should be the built&#8209;in global segment.
+* Ensure that you have two workload VPCs, one to connect to each segment.
+* Set sufficient service quotas for the https://console.aws.amazon.com/servicequotas/home/services/vpc/quotas/L-F678F1CE[VPC per Region] and https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-3E6EC3A3[VPN connections per Region] for the desired deployment configuration.
+* Subscribe to the Amazon Machine Image (AMI) used by the Quick Start in https://aws.amazon.com/marketplace/pp/prodview-b5ry47j35e7jg[AWS Marketplace].
