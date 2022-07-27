@@ -4,4 +4,4 @@ This Quick Start provides the following deployment option:
 
 * https://aws-quickstart.s3.amazonaws.com/quickstart-vmware-sd-wan-aws-cloud-wan/templates/sd-wan-entrypoint-all-new.template.yaml[Deploy {partner-product-short-name} into a new transit VPC^].
   This option builds a new AWS environment that consists of a transit VPC, subnets, internet gateway, security groups, core network edge, and customer gateways.
-  It then deploys {partner-product-short-name} into this new VPC across availability zones, brings up the site&#8209;to&#8209;site VPN connections, and extends segmentation from on&#8209;premises all the way into the AWS Cloud.
+  It then deploys {partner-product-short-name} into this new VPC across availability zones, brings up the site&#8209;to&#8209;site VPN connections, and extends segmentation from on&#8209;premises to the AWS Cloud.
