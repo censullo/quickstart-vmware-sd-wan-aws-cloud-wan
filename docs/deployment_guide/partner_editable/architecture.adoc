@@ -12,10 +12,10 @@ image::../docs/deployment_guide/images/architecture_diagram.png[Architecture]
 As shown in <<architecture1>>, this Quick Start sets up the following:
 
 * A highly available architecture that spans two Availability Zones.
-* A virtual private cloud (VPC) configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS. This VPC serves as a transit VPC connecting branch office networks and workload VPCs.
+* A VPC configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS. This VPC serves as a transit VPC connecting branch-office network VMware SD-WAN Edges with workload VPCs.
 * An internet gateway that allows the transit VPC to connect to the internet.
-* In the public subnets, {partner-software-edge} deployed to Amazon EC2 instances. These provide full-mesh VPN attachments to the AWS Cloud WAN core network edge.
-* An AWS Cloud WAN core network edge for connecting workload VPCs to the transit VPC. This contains two segment networks, or isolated routing domains, to which workload VPCs attach. After deployment, you add static routes to the route tables of your workload VPCs to connect them.
-* AWS Lambda to make API calls during deployment to configure {partner-software-orchestrator}.
+* In the public subnets, a VMware SD-WAN vEdge cluster deployed to Amazon EC2 instances. The VMware SD-WAN vEdge instances provide full-mesh VPN attachments to the AWS Cloud WAN core network edge.
+* An AWS Cloud WAN core network edge for connecting workload VPCs to the transit VPC. This contains two segment networks, or isolated routing domains, to which workload VPCs attach.
+* AWS Lambda to make API calls during deployment to configure VMware SD-WAN Orchestrator.
 * Amazon CloudWatch for storing the AWS Lambda function logs.
-* AWS Secrets Manager for securely storing {partner-software-orchestrator} credentials.
+* AWS Secrets Manager for securely storing VMware SD-WAN Orchestrator credentials.
