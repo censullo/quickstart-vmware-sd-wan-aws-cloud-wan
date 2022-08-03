@@ -863,9 +863,9 @@ p.footer-text a{color:#d7d8d8}
 <li><a href="#_postdeployment_steps">Postdeployment steps</a>
 <ul class="sectlevel2">
 <li><a href="#_add_static_routes">Add static routes</a></li>
-<li><a href="#_deleting_the_environment">Deleting the environment</a></li>
 </ul>
 </li>
+<li><a href="#_deleting_the_environment">Deleting the environment</a></li>
 <li><a href="#_troubleshooting">Troubleshooting</a>
 <ul class="sectlevel2">
 <li><a href="#_vmware_sd_wan_documentation">VMware SD-WAN documentation</a></li>
@@ -887,7 +887,7 @@ p.footer-text a{color:#d7d8d8}
 </div>
 </div>
 <div class="paragraph text-center">
-<p><strong>July 2022</strong><br>
+<p><strong>August 2022</strong><br>
 <em>David Wight, Eric Cheung-Young-Sen, and Vivek Achar, VMware, Inc.</em><br>
 <em>Sudha Thillai Govindarajan, AWS VMware Partner team</em><br>
 <em>Troy Lindsay, AWS Integration &amp; Automation team</em><br></p>
@@ -921,7 +921,7 @@ Refer to the <a href="https://github.com/aws-quickstart/quickstart-vmware-sd-wan
 <p>This Quick Start deploys VMware SD-WAN on the Amazon Web Services (AWS) Cloud. It is for organizations that want software-defined wide area network (WAN) connections between on-premises data centers, branch offices, and workloads on AWS.</p>
 </div>
 <div class="paragraph">
-<p>This Quick Start deploys a high availability cluster of VMware SD-WAN Virtual Edge (vEdge) virtual appliances to Amazon Elastic Compute Cloud (Amazon EC2) instances. AWS Cloud WAN provides network segmentation and connectivity to customer workloads in AWS virtual private clouds (VPCs). VMware SD-WAN Orchestrator provides a single pane of glass for monitoring, reporting, and managing the vEdge appliances.</p>
+<p>This Quick Start deploys a high-availability cluster of VMware SD-WAN Virtual Edge (vEdge) appliances to Amazon Elastic Compute Cloud (Amazon EC2) instances. AWS Cloud WAN provides network segmentation and connectivity to customer workloads in AWS virtual private clouds (VPCs). VMware VMware SD-WAN Orchestrator provides a single pane of glass for monitoring, reporting, and managing the vEdge appliances. For more information, refer to <a href="https://sase.vmware.com/sd-wan" class="bare">https://sase.vmware.com/sd-wan</a>.</p>
 </div>
 </div>
 </div>
@@ -964,16 +964,16 @@ AWS Cloud.</p>
 <p>A highly available architecture that spans two Availability Zones.</p>
 </li>
 <li>
-<p>A virtual private cloud (VPC) configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS. This VPC serves as a transit VPC connecting branch office networks and workload VPCs.</p>
+<p>A VPC configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS. This VPC serves as a transit VPC connecting branch-office network VMware SD-WAN Edges with workload VPCs.</p>
 </li>
 <li>
 <p>An internet gateway that allows the transit VPC to connect to the internet.</p>
 </li>
 <li>
-<p>In the public subnets, VMware SD-WAN Virtual Edge deployed to Amazon EC2 instances. These provide full-mesh VPN attachments to the AWS Cloud WAN core network edge.</p>
+<p>In the public subnets, a VMware SD-WAN vEdge cluster deployed to Amazon EC2 instances. The VMware SD-WAN vEdge instances provide full-mesh VPN attachments to the AWS Cloud WAN core network edge.</p>
 </li>
 <li>
-<p>An AWS Cloud WAN core network edge for connecting workload VPCs to the transit VPC. This contains two segment networks, or isolated routing domains, to which workload VPCs attach. After deployment, you add static routes to the route tables of your workload VPCs to connect them.</p>
+<p>An AWS Cloud WAN core network edge for connecting workload VPCs to the transit VPC. This contains two segment networks, or isolated routing domains, to which workload VPCs attach.</p>
 </li>
 <li>
 <p>AWS Lambda to make API calls during deployment to configure VMware SD-WAN Orchestrator.</p>
@@ -997,9 +997,7 @@ AWS Cloud.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://aws-quickstart.s3.amazonaws.com/quickstart-vmware-sd-wan-aws-cloud-wan/templates/sd-wan-entrypoint-all-new.template.yaml" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new transit VPC</a>.
-This option builds a new AWS environment that consists of a transit VPC, subnets, internet gateway, security groups, core network edge, and customer gateways.
-It then deploys VMware SD-WAN into this new VPC across availability zones, brings up the site&#8209;to&#8209;site VPN connections, and extends segmentation from on&#8209;premises to the AWS Cloud.</p>
+<p><a href="https://aws-quickstart.s3.amazonaws.com/quickstart-vmware-sd-wan-aws-cloud-wan/templates/sd-wan-entrypoint-all-new.template.yaml" target="_blank" rel="noopener">Deploy VMware SD-WAN into a new transit VPC</a>.  This option builds a new AWS environment that consists of a transit VPC, subnets, internet gateway, security groups, core network edge, and customer gateways. It then deploys VMware SD-WAN into this new VPC across availability zones, brings up the site&#8209;to&#8209;site VPN connections, and extends segmentation from on&#8209;premises to the AWS Cloud.</p>
 </li>
 </ul>
 </div>
@@ -1018,13 +1016,13 @@ It then deploys VMware SD-WAN into this new VPC across availability zones, bring
 <div class="ulist">
 <ul>
 <li>
-<p>Create a VMware SD-WAN <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6375F518-3A22-4CDD-B4F0-F0B2EC553869.html">administrator account</a> that will be used as a service account.</p>
+<p>Create a VMware SD-WAN <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6375F518-3A22-4CDD-B4F0-F0B2EC553869.html" target="_blank" rel="noopener">administrator account</a> that will be used as a service account.</p>
 </li>
 <li>
-<p>Create a <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-D174B662-089C-4EC9-A389-682363C40ADF.html">hub profile</a>, which will be assigned to the new hub cluster.</p>
+<p>Create a <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-D174B662-089C-4EC9-A389-682363C40ADF.html" target="_blank" rel="noopener">hub profile</a>, which will be assigned to the new hub cluster.</p>
 </li>
 <li>
-<p>Define two <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html">segments</a>. The first segment should be the built&#8209;in global segment.</p>
+<p>Define two <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-E462C603-C931-4897-BFC2-7F61D15CD043.html" target="_blank" rel="noopener">segments</a>. The first segment should be the built&#8209;in global segment.</p>
 </li>
 </ul>
 </div>
@@ -1033,10 +1031,10 @@ It then deploys VMware SD-WAN into this new VPC across availability zones, bring
 <p>Ensure that you have two workload VPCs, one to connect to each segment.</p>
 </li>
 <li>
-<p>Set sufficient service quotas for the <a href="https://console.aws.amazon.com/servicequotas/home/services/vpc/quotas/L-F678F1CE">VPC per Region</a> and <a href="https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-3E6EC3A3">VPN connections per Region</a> for the desired deployment configuration.</p>
+<p>Set sufficient service quotas for the <a href="https://console.aws.amazon.com/servicequotas/home/services/vpc/quotas/L-F678F1CE" target="_blank" rel="noopener">VPC per Region</a> and <a href="https://console.aws.amazon.com/servicequotas/home/services/ec2/quotas/L-3E6EC3A3" target="_blank" rel="noopener">VPN connections per Region</a> for the desired deployment configuration.</p>
 </li>
 <li>
-<p>Subscribe to the Amazon Machine Image (AMI) used by the Quick Start in <a href="https://aws.amazon.com/marketplace/pp/prodview-b5ry47j35e7jg">AWS Marketplace</a>.</p>
+<p>Subscribe to the Amazon Machine Image (AMI) used by the Quick Start in <a href="https://aws.amazon.com/marketplace/pp/prodview-b5ry47j35e7jg" target="_blank" rel="noopener">AWS Marketplace</a>.</p>
 </li>
 </ul>
 </div>
@@ -1096,33 +1094,35 @@ Unless you are customizing the Quick Start templates for your own projects, don&
 <div class="sect2">
 <h3 id="_add_static_routes">Add static routes</h3>
 <div class="paragraph">
-<p>To enable instances in your workload VPCs to communicate with your on-premises networks, add static routes to workload VPC route tables. For more information, refer to <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html">Editing static routes for a Site-to-Site VPN connection</a>.</p>
+<p>To enable instances in your workload VPCs to communicate with your on-premises networks, add static routes to workload VPC route tables. For more information, refer to <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html" target="_blank" rel="noopener">Editing static routes for a Site-to-Site VPN connection</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_deleting_the_environment">Deleting the environment</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deleting_the_environment">Deleting the environment</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you need to delete the VMware SD-WAN environment you deploy, complete the following steps.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html">Delete static routes</a> added to workload VPC route tables.</p>
+<p><a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html" target="_blank" rel="noopener">Delete static routes</a> added to workload VPC route tables.</p>
 </li>
 <li>
-<p>Use the AWS CloudFormation console to <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-delete-stack.html">delete the root stack</a>.</p>
+<p>Use the AWS CloudFormation console to <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-delete-stack.html" target="_blank" rel="noopener">delete the root stack</a>.</p>
 </li>
 <li>
-<p>Use the AWS Network Manager console to delete the <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html#cloudwan-attachments-deleting">VPC and VPN attachments</a>, <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-core-network-delete">core network edge</a>, and <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-global-network-delete">global network</a>.</p>
+<p>Use the AWS Network Manager console to delete the <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html#cloudwan-attachments-deleting" target="_blank" rel="noopener">VPC and VPN attachments</a>, <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-core-network-delete" target="_blank" rel="noopener">core network edge</a>, and <a href="https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-global-network-delete" target="_blank" rel="noopener">global network</a>.</p>
 </li>
 <li>
-<p>Use the VPC console to delete the <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html">Site-to-Site VPN connections</a> and <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html#delete-cgw">customer gateways</a>.</p>
+<p>Use the VPC console to delete the <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html" target="_blank" rel="noopener">Site-to-Site VPN connections</a> and <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html#delete-cgw" target="_blank" rel="noopener">customer gateways</a>.</p>
 </li>
 <li>
-<p>Use the VMware SD-WAN Orchestrator console to delete the hub cluster assigned to the profile and the <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html">edge cluster configuration</a>.</p>
+<p>Use the VMware SD-WAN Orchestrator console to delete the hub cluster assigned to the profile and the <a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html" target="_blank" rel="noopener">edge cluster configuration</a>.</p>
 </li>
 </ol>
-</div>
 </div>
 </div>
 </div>
@@ -1137,19 +1137,19 @@ Unless you are customizing the Quick Start templates for your own projects, don&
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/sd-wan-orchestrator-deployment-and-monitoring-guide/GUID-98E59261-4F2E-447E-934E-876AD49125B6.html">Troublehooting VMware SD-WAN Orchestrator</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/sd-wan-orchestrator-deployment-and-monitoring-guide/GUID-98E59261-4F2E-447E-934E-876AD49125B6.html" target="_blank" rel="noopener">Troublehooting VMware SD-WAN Orchestrator</a></p>
 </li>
 <li>
-<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-DF77CD1D-DCA0-4E6B-A7C3-3FA4D188E80E.html">Run remote diagnostics on the VMware SD-WAN Virtual Edge</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-DF77CD1D-DCA0-4E6B-A7C3-3FA4D188E80E.html" target="_blank" rel="noopener">Run remote diagnostics on the VMware SD-WAN Virtual Edge</a></p>
 </li>
 <li>
-<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6027F4B6-3A1C-45EF-9CCF-AB55A85E8CCF.html">Perform remote actions on the VMware SD-WAN Virtual Edge</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-6027F4B6-3A1C-45EF-9CCF-AB55A85E8CCF.html" target="_blank" rel="noopener">Perform remote actions on the VMware SD-WAN Virtual Edge</a></p>
 </li>
 <li>
-<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-3DEA67A4-6BC6-468E-AA09-7D7C04B8FF14.html">Collect diagnostic bundles for the VMware SD-WAN Virtual Edge</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-3DEA67A4-6BC6-468E-AA09-7D7C04B8FF14.html" target="_blank" rel="noopener">Collect diagnostic bundles for the VMware SD-WAN Virtual Edge</a></p>
 </li>
 <li>
-<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-FB22F808-30AB-454B-9769-9525ACF8FD05.html">Troubleshooting VMware SD-WAN Virtual Edge clustering</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-FB22F808-30AB-454B-9769-9525ACF8FD05.html" target="_blank" rel="noopener">Troubleshooting VMware SD-WAN Virtual Edge clustering</a></p>
 </li>
 </ul>
 </div>
