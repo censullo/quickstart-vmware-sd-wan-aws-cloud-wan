@@ -8,7 +8,7 @@
 :partner-software-orchestrator: {partner-product-short-name} Orchestrator
 :partner-software-orchestrator-short: VCO
 :partner-company-name: VMware, Inc.
-:doc-month: July
+:doc-month: August
 :doc-year: 2022
 :partner-contributors: David Wight, Eric Cheung-Young-Sen, and Vivek Achar, {partner-company-name}
 // :other-contributors: Akua Mansa, Trek10

@@ -4,14 +4,14 @@
 
 === Add static routes
 
-To enable instances in your workload VPCs to communicate with your on-premises networks, add static routes to workload VPC route tables. For more information, refer to https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[Editing static routes for a Site-to-Site VPN connection].
+To enable instances in your workload VPCs to communicate with your on-premises networks, add static routes to workload VPC route tables. For more information, refer to https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[Editing static routes for a Site-to-Site VPN connection^].
 
-=== Deleting the environment
+== Deleting the environment
 
 If you need to delete the VMware SD-WAN environment you deploy, complete the following steps.
 
-. https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[Delete static routes] added to workload VPC route tables.
-. Use the AWS CloudFormation console to https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-delete-stack.html[delete the root stack].
-. Use the AWS Network Manager console to delete the https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html#cloudwan-attachments-deleting[VPC and VPN attachments], https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-core-network-delete[core network edge], and https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-global-network-delete[global network].
-. Use the VPC console to delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html[Site-to-Site VPN connections] and https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html#delete-cgw[customer gateways].
-. Use the {partner-software-orchestrator} console to delete the hub cluster assigned to the profile and the https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html[edge cluster configuration].
+. https://docs.aws.amazon.com/vpn/latest/s2svpn/vpn-edit-static-routes.html[Delete static routes^] added to workload VPC route tables.
+. Use the AWS CloudFormation console to https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-delete-stack.html[delete the root stack^].
+. Use the AWS Network Manager console to delete the https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-attachments-working-with.html#cloudwan-attachments-deleting[VPC and VPN attachments^], https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-core-network-delete[core network edge^], and https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-networks-working-with.html#cloudwan-global-network-delete[global network^].
+. Use the VPC console to delete the https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html[Site-to-Site VPN connections^] and https://docs.aws.amazon.com/vpn/latest/s2svpn/delete-vpn.html#delete-cgw[customer gateways^].
+. Use the {partner-software-orchestrator} console to delete the hub cluster assigned to the profile and the https://docs.vmware.com/en/VMware-SD-WAN/5.0/VMware-SD-WAN-Administration-Guide/GUID-1671E805-3EBF-45AD-A656-99E1CF99DC9C.html[edge cluster configuration^].
